@@ -22,8 +22,6 @@ jobs:
     - name: Install dependencies
       run: | 
         # обновление pip
-        pip --version
-        pip3 --version
         python -m pip install --upgrade pip 
         # установка flake8 и его плагинов
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
