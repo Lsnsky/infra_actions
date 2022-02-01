@@ -52,12 +52,12 @@ jobs:
         # Запуск скрипта авторизации на Docker Hub
         uses: docker/login-action@v1 
         with:
-          username: lsnsky 
-          password: i121F601.,
+          username: ${{ secrets.DOCKER_USERNAME }} 
+          password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to Docker Hub
         # Пуш образа в Docker Hub 
         uses: docker/build-push-action@v2 
         with:
           push: true
-          tags: lsnsky/infra_actions:v1.01_01.02.2022
+          tags: lsnsky/infra_actions:v1.02_01.02.2022
         
